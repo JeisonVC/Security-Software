@@ -15,7 +15,8 @@
 		<label>Descripcion del producto</label>
 		<input type="text" name="txt_descpro"/></br>
 		<button name="accion" value="create">Guardar</button>
-		<?php echo @$_REQUEST["$mensaje"]; ?>
+		<?php echo @$_REQUEST["$mensaje"];
+		?>
 	</form>
 
 </body>

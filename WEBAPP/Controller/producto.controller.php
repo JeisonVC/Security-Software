@@ -12,12 +12,11 @@ require_once("../Views/Components/producto.class.php");
 			$desc_pro=$_POST["txt_descpro"];
 			try {
 					Gestion_Producto::Guardar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
-					$mensaje = base64_encode("Su registro se creo correctamente");
+					$mensaje =("Su registro se creo correctamente");
 				} 
 				catch (Exception $e) {
-					$mensaje = base64_encode("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
+					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
 				}
-				// header("Location: ../View/Registrar_Usuario.php?m=".$mensaje."&tm=".$tipomensaje);
 			break;
 	}
 ?>
