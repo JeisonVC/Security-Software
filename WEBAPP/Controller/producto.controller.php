@@ -13,10 +13,12 @@ require_once("../Views/Components/producto.class.php");
 			try {
 					Gestion_Producto::Guardar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
 					$mensaje =("Su registro se creo correctamente");
+					echo $mensaje;
 				} 
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
 				}
+				// header("Location: ../View/guardar_producto.php?m=".$mensaje);
 			break;
 	}
 ?>
