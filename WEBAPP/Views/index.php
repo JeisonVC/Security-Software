@@ -15,10 +15,10 @@
       <label for="contra">Escriba Contraseña</label>
       <input type="text" name="contra" id="contra">
       <br>
-      <a href="#">Restablecer contraseña</a>
-      <a href="#">Regístrese</a>
       <input type="submit" name="enviar" id="enviar" value="enviar">
     </form>
+
+
 
 </body>
 </html>
