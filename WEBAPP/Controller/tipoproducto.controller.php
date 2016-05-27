@@ -5,8 +5,8 @@ require_once("../Views/Components/tipoproducto.class.php");
 
 	switch ($accion) {
 		case 'create':
-			$tipopro_cod=$_POST["txt_tipopro"];
-			$tipopro_nombre=$_POST["txt_nombretipopro"];
+			$tipopro_cod=$_POST["txt_tipoprocod"];
+			$tipopro_nombre=$_POST["txt_tipopronom"];
 			$tipopro_desc=$_POST["txt_desctipopro"];
 			try {
 					Gestion_Tipoproducto::Guardar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
