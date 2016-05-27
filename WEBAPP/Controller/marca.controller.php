@@ -1,20 +1,20 @@
 <?php
-//producto.controller.php
+//marca.controller.php
 require_once("../Model/conexion.php");
-require_once("../Views/Components/producto.class.php");
+require_once("../Views/Components/marca.class.php");
 	$accion = $_REQUEST["accion"];
 
 	switch ($accion) {
 		case 'create':
-			$produ_cod=$_POST["txt_codpro"];
-			$tipopro_cod=$_POST["txt_tipopro"];
-			$marca_cod=$_POST["txt_marcapro"];
-			$desc_pro=$_POST["txt_descpro"];
+		 
+			$marca_cod=$_POST["txt_codmarca"];
+			$marca_nombre=$_POST["txt_nommarca"];
+			$marca_logo=$_POST["img_logomarca"];
+			
 			try {
-					Gestion_Producto::Guardar($produ_cod, $tipopro_cod, $marca_cod, $desc_pro);
+					Gestion_Marca::Guardar($marca_cod, $marca_nombre, $marca_logo);
 					$mensaje =("Su registro se creo correctamente");
 					echo $mensaje;
-	
 				} 
 				catch (Exception $e) {
 					$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
