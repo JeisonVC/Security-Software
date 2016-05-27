@@ -11,9 +11,13 @@
 	<option>Selecionar</option>
 	<option>Administrador</option>
 	<option>Vigilante</option>
+	<option>Aprendiz</option>
+	<option>Instructor</option>
 </select>
 <label>Codigo</label>
 <input type="text" name="codigo"/>
+<label>Codigo del rol</label>
+<input type="text" name="codigo_rol"/>
 <label>Documento</label>
 <input type="text" name="documento"/>
 <label>Nombre</label>

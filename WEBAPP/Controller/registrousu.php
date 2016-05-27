@@ -2,21 +2,23 @@
 require_once("../Model/conexion.php");
 require_once("../Model/usuario.class.php");
 
-$accion=$_REQUEST["action"];
-switch ($accion) {
+$action=$_REQUEST["action"];
+switch ($action) {
 	case 'Guardar':
+		$codigo=$_POST["codigo"];
+		$codigo_rol=$_POST["codigo_rol"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
 		$contraseña=$_POST["contraseña"];
-		$selecion=$_POST["selecion"];
-		$codigo=$_POST["codigo"];
+		//$selecion=$_POST["selecion"];
+		
 		$documento=$_POST["documento"];
 
 		try{
-			Gestion_usuario::Guardar($nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña,$selecion,$codigo,$documento);
+			Gestion_usuario::Guardar($codigo,$codigo_rol,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña,$documento);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
