@@ -12,12 +12,12 @@
       <nav>
         <div class="nav-wrapper">
         <a href="#!" class="brand-logo" id="img"></a>
-        <ul class="right hide-on-med-and-down" >
+        <ul class="right hide-on-med-and-down" id="letra">
 
             <!-- Dropdown Trigger -->
 
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Registrar Usuario
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Registrar Usuario
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Registrar Equipo
           <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Cerrar Sesion
             
         </ul>

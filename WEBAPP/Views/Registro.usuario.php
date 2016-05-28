@@ -8,11 +8,11 @@
 <form action="../Controller/registrousu.php" method="post">
 <label>Rol que Desempeña</label>
 <select name="selecion">
-	<option>Selecionar</option>
-	<option>Administrador</option>
-	<option>Vigilante</option>
-	<option>Aprendiz</option>
-	<option>Instructor</option>
+	<option value="m">Selecionar</option>
+	<option value="Administrador">Administrador</option>
+	<option value="vigilante">Vigilante</option>
+	<option value="aprendiz">Aprendiz</option>
+	<option vallue="instructor">Instructor</option>
 </select>
 <label>Codigo</label>
 <input type="text" name="codigo"/>

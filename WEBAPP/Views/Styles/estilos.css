@@ -12,6 +12,11 @@ margin-top: -5px;
 margin-left: 6px;
 }
 nav{
-background-color: grey;
+background-color: #616161;
+height: 90px;
 
+}
+#letra{
+
+	padding-top: 15px;
 }
