@@ -15,16 +15,19 @@
         <ul class="right hide-on-med-and-down" id="letra">
 
             <!-- Dropdown Trigger -->
-
+          
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Registrar Usuario
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Registrar Equipo
           <li id="cerrar"><a class="dropdown-button" href="#!" data-activates="dropdown3">
-            
+           
         </ul>
+
         </div>
       </nav>
-      
+      <h4>Security </h4>
+          
         </li>
+        <h5>Software</h5> 
       </ul>
     </div>
 
