@@ -2,3 +2,26 @@
 	padding: 0;
 	margin: 0;
 }
+nav{
+
+	background-color: #424242;
+	height: 90px;
+}
+#img{
+	background: url(../imagenes/encabezado.png) no-repeat;
+	width: 100px;
+	height: 100px;
+	margin-left:10px;
+}
+
+#letra{
+	padding-top: 10px;
+	margin-right: 50px;
+}
+#cerrar{
+	background: url(../imagenes/cerrarsesion.png) no-repeat;
+	width: 50px;
+	height: 50px;
+	margin-top: 9px;
+	margin-left: 10px;
+}

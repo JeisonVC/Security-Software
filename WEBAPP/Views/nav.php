@@ -18,7 +18,7 @@
 
           <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Registrar Usuario
           <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Registrar Equipo
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Cerrar Sesion
+          <li id="cerrar"><a class="dropdown-button" href="#!" data-activates="dropdown3">
             
         </ul>
         </div>
