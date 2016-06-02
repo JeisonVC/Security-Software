@@ -1,5 +1,16 @@
+<?php
+require_once("../Model/conexion.php");
+require_once("../Model/usuario.class.php");
+
+
+$rol =Gestion_usuario::cargar_rol();
+
+
+?>
+
 <html>
 <head>
+<meta charset="utf-8">
 	<title></title>
 <link rel="stylesheet" type="text/css" href="Styles/estilos.css">
 </head>
@@ -8,16 +19,14 @@
 <form action="../Controller/registrousu.php" method="post">
 <label>Rol que Desempeña</label>
 <select name="selecion">
-	<option value="m">Selecionar</option>
-	<option value="Administrador">Administrador</option>
-	<option value="vigilante">Vigilante</option>
-	<option value="aprendiz">Aprendiz</option>
-	<option vallue="instructor">Instructor</option>
+	<?php
+foreach ($rol as $roles) {
+	echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
+}
+	?>
 </select>
 <label>Codigo</label>
 <input type="text" name="codigo"/>
-<label>Codigo del rol</label>
-<input type="text" name="codigo_rol"/>
 <label>Documento</label>
 <input type="text" name="documento"/>
 <label>Nombre</label>
@@ -33,10 +42,8 @@
 <label>Contraseña</label>
 <input type="password" name="contraseña"/>
 <button value="Guardar" name="action">Guardar</button>
+<button a href="modificar.php" value="Modificar" name="action">Modificar</button>
 
 </div>
-
-
-</form>
 </body>
 </html>
