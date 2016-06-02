@@ -18,5 +18,30 @@ require_once("../Views/Components/tipoproducto.class.php");
 				}
 				// header("Location: ../View/guardar_producto.php?m=".$mensaje);
 			break;
+		case 'update':
+         	$tipopro_cod=$_POST["txt_tipoprocod"];
+			$tipopro_nombre=$_POST["txt_tipopronom"];
+			$tipopro_desc=$_POST["txt_desctipopro"];
+
+     		 try {
+     		 	Gestion_Tipoproducto::Modificar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
+     		 	echo "Modificó con exito";
+     		 } catch (Exception $e) {
+     		 	echo $e;
+     		 }
+   		break;
+   		case 'delete':
+           $tipopro_cod = $_GET["tipoprocod_usu"];
+
+
+       		 try {
+       		 	Gestion_Tipoproducto::Eliminar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
+       		 	echo "Eliminó con exito";
+       		 } catch (Exception $e) {
+       		 	echo $e;
+       		 }
+     		break;
 	}
+	//header("Location: ../../Controller/gestion_tipoproducto.php");
+	header("Location: ../Views/Components/gestion_tipoproducto.php");
 ?>
