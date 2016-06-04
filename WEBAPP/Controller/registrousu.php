@@ -13,10 +13,10 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
-		$contraseña=$_POST["contraseña"];
+		$contrasena=$_POST["contrasena"];
 		
 		try{
-			Gestion_usuario::Guardar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña);
+			Gestion_usuario::Guardar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){

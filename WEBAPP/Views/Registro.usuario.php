@@ -25,23 +25,42 @@ foreach ($rol as $roles) {
 }
 	?>
 </select>
+<br>
+<br>
 <label>Codigo</label>
-<input type="text" name="codigo"/>
+<input type="number" name="codigo" required/>
+<br>
+<br>
 <label>Documento</label>
-<input type="text" name="documento"/>
+<input type="number" name="documento" required/>
+<br>
+<br>
 <label>Nombre</label>
-<input type="text" name="nombre"/>
+<input type="text" name="nombre" required/>
+<br>
+<br>
 <label>Apellido</label>
-<input type="text" name="apellido"/>
+<input type="text" name="apellido" required/>
+<br>
+<br>
 <label>Email</label>
-<input type="text" name="email"/>
+<input type="email" name="email" required/>
+<br>
+<br>
 <label>Telefono</label>
-<input type="text" name="telefono"/>
+<input type="number" name="telefono"/>
+<br>
+<br>
 <label>Nombre de Usuario</label>
-<input type="text" name="nombredeusuario"/>
+<input type="text" name="nombredeusuario" required/>
+<br>
+<br>
 <label>Contraseña</label>
-<input type="password" name="contraseña"/>
+<input type="password" name="contrasena" required/>
+<br>
+<br>
 <button value="Guardar" name="action">Guardar</button>
+<br>
 <button a href="modificar.php" value="Modificar" name="action">Modificar</button>
 
 </div>
