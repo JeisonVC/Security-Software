@@ -14,8 +14,7 @@
       <br>
       <input type="password" name="contrasena" placeholder="Escriba Contraseña">
       <br>
-fff
-
+      
       <input type="submit" name="inicio" value="Iniciar Sesion">
       <input type="reset" name="borrar" value="Limpiar!">
     </form>
