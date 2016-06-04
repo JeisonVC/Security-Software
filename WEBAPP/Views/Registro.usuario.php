@@ -61,7 +61,7 @@ foreach ($rol as $roles) {
 <br>
 <button value="Guardar" name="action">Guardar</button>
 <br>
-<button a href="modificar.php" value="Modificar" name="action">Modificar</button>
+<a href="consulta.usuario.php">Consultar</a>
 
 </div>
 </body>

@@ -25,6 +25,21 @@ class Gestion_usuario{
 		Conexion::Cerrarbd();
 
 	}
+	function consultar_usuario(){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario";
+
+		$query=$pdo->prepare($sql);
+		$query->execute();
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+
+		Conexion::Cerrarbd();
+		return $result;
+
+	}
+
 
 function cargar_rol(){
 		$pdo= Conexion::Abrirbd();

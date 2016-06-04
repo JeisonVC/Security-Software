@@ -25,7 +25,6 @@ switch ($action) {
 
 		break;
 
-
 		case 'Modificar':
 		$selecion=$_POST["selecion"];
 		$codigo=$_POST["codigo"];
