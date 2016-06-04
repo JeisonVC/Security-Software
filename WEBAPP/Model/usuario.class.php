@@ -39,6 +39,18 @@ class Gestion_usuario{
 		return $result;
 
 	}
+		function consultarusuariocodigo($codigo){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario where usu_cod=?";
+
+		$query=$pdo->prepare($sql);
+		$query->execute(array($codigo));
+
+		Conexion::Cerrarbd();
+
+	}
 
 
 function cargar_rol(){
