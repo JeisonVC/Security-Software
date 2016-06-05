@@ -18,7 +18,7 @@ $rol =Gestion_usuario::cargar_rol();
 <div>
 <form action="../Controller/registrousu.php" method="post">
 <label>Rol que Desempeña</label>
-<select name="selecion">
+<select name="seleccion">
 	<?php
 foreach ($rol as $roles) {
 	echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
@@ -27,12 +27,13 @@ foreach ($rol as $roles) {
 </select>
 <br>
 <br>
-<label>Codigo</label>
+<!--<label>Codigo</label>
 <input type="number" name="codigo" required/>
 <br>
+-->
 <br>
 <label>Documento</label>
-<input type="number" name="documento" required/>
+<input title="Entre 6 y 10" pattern=".{10}" type="number" name="documento" required/>
 <br>
 <br>
 <label>Nombre</label>
@@ -48,7 +49,7 @@ foreach ($rol as $roles) {
 <br>
 <br>
 <label>Telefono</label>
-<input type="number" name="telefono"/>
+<input type="number" name="telefono" placeholder="Opcional" />
 <br>
 <br>
 <label>Nombre de Usuario</label>

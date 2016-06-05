@@ -1,13 +1,15 @@
 <?php
 class Gestion_usuario{
-	function Guardar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena){
+	//,$codigo
+	function Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-		$sql="INSERT INTO usuario(usu_cod,rol_cod, usu_nom, usu_ape, usu_email,usu_tel,usu_nick, usu_pass, usu_doc) values(?,?,?,?,?,?,?,?,?)";
+		//usu_cod,
+		$sql="INSERT INTO usuario(rol_cod, usu_nom, usu_ape, usu_email,usu_tel,usu_nick, usu_pass, usu_docu) values(?,?,?,?,?,?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($codigo,$selecion,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena,$documento));
+		//$codigo,
+		$query->execute(array($seleccion,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena,$documento));
 
 		Conexion::Cerrarbd();
 

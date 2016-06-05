@@ -5,8 +5,8 @@ require_once("../Model/usuario.class.php");
 $action=$_REQUEST["action"];
 switch ($action) {
 	case 'Guardar':
-		$selecion=$_POST["selecion"];
-		$codigo=$_POST["codigo"];
+		$seleccion=$_POST["seleccion"];
+		//$codigo=$_POST["codigo"];
 		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
@@ -14,9 +14,9 @@ switch ($action) {
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
 		$contrasena=$_POST["contrasena"];
-		
+		//$codigo,
 		try{
-			Gestion_usuario::Guardar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
+			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
@@ -26,7 +26,7 @@ switch ($action) {
 		break;
 
 		case 'Modificar':
-		$selecion=$_POST["selecion"];
+		$seleccion=$_POST["seleccion"];
 		$codigo=$_POST["codigo"];
 		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
@@ -37,7 +37,7 @@ switch ($action) {
 		$contraseña=$_POST["contraseña"];
 		
 try{
-			Gestion_usuario::Modificar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña);
+			Gestion_usuario::Modificar($seleccion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña);
 			echo "Modifico con exito";
 
 		}catch(Exception $e){
