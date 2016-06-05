@@ -1,28 +1,26 @@
 <?php
 class Gestion_usuario{
-	//,$codigo
-	function Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena){
+	function Guardar($selecion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-		//usu_cod,
+
 		$sql="INSERT INTO usuario(rol_cod, usu_nom, usu_ape, usu_email,usu_tel,usu_nick, usu_pass, usu_docu) values(?,?,?,?,?,?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		//$codigo,
-		$query->execute(array($seleccion,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena,$documento));
+		$query->execute(array($selecion,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena,$documento));
 
 		Conexion::Cerrarbd();
 
 	}
 
-	function Modificar($selecion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña){
+	function Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="UPDATE  usuario(rol_desempena,usu_cod, usu_nom, usu_ape, usu_email,usu_tel,usu_nick, usu_pass, usu_doc) values(?,?,?,?,?,?,?,?,?,?)";
-
+		
+		$sql="UPDATE  usuario set usu_docu=?, usu_nom=?,usu_ape=?,usu_email=?,usu_tel=?,usu_nick=?,usu_pass=? WHERE usu_cod=? ";
 		$query=$pdo->prepare($sql);
-		$query->execute(array($selecion,$codigo,$codigo_rol,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña));
+		$query->execute(array($documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena,$codigo));
 
 		Conexion::Cerrarbd();
 
@@ -45,13 +43,16 @@ class Gestion_usuario{
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM usuario where usu_cod=?";
+		$sql="SELECT * FROM usuario WHERE usu_cod=?";
 
 		$query=$pdo->prepare($sql);
 		$query->execute(array($codigo));
-
+		
+		$result=$query->fetch(PDO::FETCH_BOTH);
+		
 		Conexion::Cerrarbd();
-
+		
+		return $result;
 	}
 
 

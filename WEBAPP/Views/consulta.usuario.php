@@ -44,7 +44,7 @@ $usuario =Gestion_usuario::consultar_usuario();
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_email"]."</td>
 							<td>
-								<a href='modifico_usuario.php?codigo_usuario=".$row["usu_cod"]."'>modificar</a>
+								<a href='modifico_usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>modificar</a>
 							</td>
 					</tr>";
 			}

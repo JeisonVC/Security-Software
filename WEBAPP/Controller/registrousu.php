@@ -26,7 +26,6 @@ switch ($action) {
 		break;
 
 		case 'Modificar':
-		$seleccion=$_POST["seleccion"];
 		$codigo=$_POST["codigo"];
 		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
@@ -34,11 +33,11 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
-		$contraseña=$_POST["contraseña"];
+		$contrasena=$_POST["contrasena"];
 		
 try{
-			Gestion_usuario::Modificar($seleccion,$codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contraseña);
-			echo "Modifico con exito";
+			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
+			header("location:../views/consulta.usuario.php");
 
 		}catch(Exception $e){
 			echo $e;
