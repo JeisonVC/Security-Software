@@ -17,7 +17,7 @@ $codigo1 = Gestion_rol::Consultarporcodigo($_GET["codigo_rol"]);
 	<br>
 	<label>Nombre</label>
 	<input type="text" name="txt_nomrol" value=" <?php echo $codigo1["rol_nombre"]; ?>" required/>
-	<button value="Modificar" name="action">Modificar</button>
+	<button name="action" value="Modificar">Modificar</button>
 	
 	
 

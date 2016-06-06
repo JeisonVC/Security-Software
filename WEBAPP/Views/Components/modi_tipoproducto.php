@@ -15,9 +15,9 @@ require_once("tipoproducto.class.php");
       <input type="hidden" name="txt_tipoprocod" readonly value="<?php echo $tipo["tipopro_cod"]; ?>">
       <br>
 		<label>Nombre del tipo de producto</label>
-		<input type="text" name="txt_tipopronom"/></br>
+		<input type="text" name="txt_tipopronom" value="<?php echo $tipo["tipopro_nombre"]; ?>" /></br>
 		<label>Descripcion del tipo de producto</label>
-		<input type="text" name="txt_desctipopro"></br>
+		<input type="text" name="txt_desctipopro" value="<?php echo $tipo["tipopro_desc"]; ?>"></br>
 		<button name="accion" value="update">Modificar</button>
 		<?php echo @$_REQUEST["$mensaje"];
 		?>
