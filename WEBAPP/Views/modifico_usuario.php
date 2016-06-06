@@ -3,7 +3,7 @@ require_once("../Model/conexion.php");
 require_once("../Model/usuario.class.php");
 
 
-$codigo =Gestion_usuario::consultarusuariocodigo($_GET["codigo_usuario"]);
+$codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
 
 ?>
 

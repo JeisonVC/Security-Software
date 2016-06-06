@@ -50,7 +50,7 @@ $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
                     <td>".$row["tipopro_desc"]."</td>
                     <td>
                     <a href='modi_tipoproducto.php?tipopro_cod=".$row["tipopro_cod"]."'>Modificar</a> -
-                    <a href='../../Controller/tipoproducto.controller.php?tipoprocod_usu=".$row["tipopro_cod"]."&accion=delete' >Eliminar</a></td>
+                    <a href='../../Controller/tipoproducto.controller.php?tipopro_cod=".$row["tipopro_cod"]."&accion=delete' >Eliminar</a></td>
                   </tr>";
             $item++;
           }

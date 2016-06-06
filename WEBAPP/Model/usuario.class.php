@@ -39,7 +39,7 @@ class Gestion_usuario{
 		return $result;
 
 	}
-		function consultarusuariocodigo($codigo){
+		function Consultarusuariocodigo($codigo){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 

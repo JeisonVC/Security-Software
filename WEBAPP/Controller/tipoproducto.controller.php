@@ -31,7 +31,7 @@ require_once("../Views/Components/tipoproducto.class.php");
      		 }
    		break;
    		case 'delete':
-           $tipopro_cod = $_GET["tipoprocod_usu"];
+           $tipopro_cod = $_GET["tipopro_cod"];
 
 
        		 try {

@@ -16,7 +16,7 @@ $rol =Gestion_usuario::cargar_rol();
 </head>
 <body>
 <div>
-<form action="../Controller/registrousu.php" method="post" onsubmit="return checkForm(this)">
+<form action="../Controller/registrousu.php" method="post">
 <label>Rol que Desempeña</label>
 <select name="seleccion">
 	<?php
