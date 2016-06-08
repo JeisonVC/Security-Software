@@ -9,6 +9,13 @@
 		<link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
 	</head>
 	<body>
+		<?php
+			if (isset($_GET["seccion"])) {
+				$pagina = $_GET["seccion"];
+			}else {
+			  $pagina = "";
+			}
+   ?>
 
 		<?php
 			include ("nav.menu.php");
