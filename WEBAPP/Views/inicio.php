@@ -1,34 +1,21 @@
-<?php
-
-	/*if (isset($_GET["navegador"])) {
-		$pagina = $_GET["navegador"];
-	}
-	else {
-		$pagina="";
-	}*/
-?>
-
-	<!DOCTYPE html>
-	<html>
+<!DOCTYPE html>
+<html>
 	<head>
-		<title></title>
-		<link rel="stylesheet" href="estilos.css">
+		<meta charset="utf-8">
+		<title>Inicio</title>
+		<link rel="shortcut icon" href="imagenes/logo.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
 	</head>
 	<body>
-	
 
 		<?php
-			#RECORDAR COMO LO PRIMERO QUE SE VE DE LA PAGINA ES EL LOGIN, ENTONCES SERA EL INDEX Y NO ESTA SESION.
+			include ("nav.menu.php");
+			include ("section.menu.php");
+		 ?>
 
-	//		include ("condicion.php");
-
-			#Login-index, Jhon T.
-		include ("nav.php"); 			#Encabezado y menu, Andrea T.
-			#Pagina de inicio, Jhon T.
-	//		include ("producto.php");	#Registro de productos, Jeison V.
-	//		include ("usuario.php") 	#Registro de usuarios, Andrea T.
-
-			?>
-
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	</body>
-	</html>
+</html>
