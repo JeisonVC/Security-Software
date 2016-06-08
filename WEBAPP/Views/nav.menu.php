@@ -2,9 +2,25 @@
   <div class="nav-wrapper blue-grey darken-4">
     <img src="imagenes/Logo.png" width="110" height="63" class="brand-logo" >
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="components/guardar_producto.php" id="ini_men">Registro de producto</a></li>
-      <li><a href="inicio.php?=usuario" id="ini_men">Registro de Usuario</a></li>
-      <li><a href="index.php" id="ini_men">Cerrar Sesion</a></li>
+      <li><a href="inicio.php?seccion=producto" id="ini_men">Registro de producto</a></li>
+      <li><a href="inicio.php?seccion=usuario" id="ini_men">Registro de Usuario</a></li>
+      <li><a href="inicio.php?seccion=cerrarsesion.php" id="ini_men">Cerrar Sesion</a></li>
     </ul>
   </div>
 </nav>
+
+<?php
+  switch ($pagina) {
+    case 'producto':
+      include("registro.php");
+    break;
+    case 'usuario':
+      include("Registro.usuario.php");
+    break;
+    case 'cerrarsesion':
+      include("index.php");
+    break;
+    default:
+  break;
+}
+?>
