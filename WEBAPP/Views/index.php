@@ -3,23 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>SecuritySoftware</title>
-    <link rel="stylesheet" href="Styles/estilos.css" charset="utf-8">
-  </head>
+    <link rel="shortcut icon" href="imagenes/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
 
+  </head>
   <body>
 
-    <form action="validar.php" method="post">
-      <h3>Ingresar</h3>
-      <input type="text" name="nombre" placeholder="Escriba Nombre">
-      <br>
-      <input type="password" name="contrasena" placeholder="Escriba Contraseña">
-      <br>
-      
-      <input type="submit" name="inicio" value="Iniciar Sesion">
-      <input type="reset" name="borrar" value="Limpiar!">
-    </form>
+    <?php
+      include ("nav.index.php");
+      include ("form.login.php");
+     ?>
 
-    <a href="#"><img src="" alt="" /></a>
-
+     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   </body>
 </html>
