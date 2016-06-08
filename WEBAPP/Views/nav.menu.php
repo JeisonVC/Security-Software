@@ -12,7 +12,7 @@
 <?php
   switch ($pagina) {
     case 'producto':
-      include("registro.php");
+      include("guardar_producto.php");
     break;
     case 'usuario':
       include("Registro.usuario.php");
