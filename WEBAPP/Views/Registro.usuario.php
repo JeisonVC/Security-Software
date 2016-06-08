@@ -46,3 +46,5 @@
 	<button value="Guardar" name="action">Guardar</button>
 <br>
 	<button><a href="consulta.usuario.php">Consultar</a></button>
+
+</form>
