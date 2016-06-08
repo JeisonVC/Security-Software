@@ -7,7 +7,7 @@
 	<title></title>
 </head>
 <body>
-<form action="../Controller/guardarrol.php" method="post">
+<form action="../Controller/guardarol.php" method="post">
 	<label>Codigo</label>
 	<input type="text" name="codigo"/>
 	<label>Codigo del rol</label>

@@ -17,13 +17,13 @@ switch ($action) {
 		}
 
 		break;
-	case 'Modificar':
-		$codigo_rol=$_POST["txt_codrol"];
-		$nombre_rol=$_POST["txt_nomrol"];
+	case 'Update':
+		$rol_cod = $_POST["txt_codrol"];
+		$rol_nombre = $_POST["txt_nomrol"];
 		try{
-			Gestion_rol::Modificar($codigo_rol, $nombre_rol);
-			echo "Guardo con exito";
-			//header("location:../views/consulta.rol.php");
+			Gestion_rol::Modificar($rol_cod, $rol_nombre);
+			echo "Modifico con exito";
+			echo "<a href='../Views/consulta.rol.php'>Volver</a>";
 		}catch(Exception $e){
 			echo $e;
 		}
@@ -36,10 +36,11 @@ switch ($action) {
     try {
        		 Gestion_rol::Eliminar($rol_cod);
        		 echo "Eliminó con exito";
+       		 echo "<a href='../Views/Regitro.rol.php'>Volver</a>";
       	}catch (Exception $e){
        		 	echo $e;
        		 }
      	break;		
 }
-header("location:../views/consulta.rol.php");
+//header("location:../views/consulta.rol.php");
 ?>

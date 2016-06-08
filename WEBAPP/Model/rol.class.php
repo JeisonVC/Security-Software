@@ -37,14 +37,14 @@ class Gestion_rol{
 		Conexion::Cerrarbd();
 		return $result;
 	}
-	function Modificar($codigo_rol, $nombre_rol)
+	function Modificar($rol_cod, $rol_nombre)
 	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$sql = "UPDATE rol SET rol_nombre = ? WHERE rol_cod = ?";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($nombre_rol, $codigo_rol));
+		$query->execute(array($rol_cod, $rol_nombre));
 		Conexion::Cerrarbd();
 	}
 	function Eliminar($codigo_rol)
