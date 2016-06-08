@@ -1,7 +1,8 @@
 <section>
   <div id="sec_uno">
-    <i class="large material-icons" id="icono_uno">insert_chart</i>
-    <h5>Facilidad de uso</h5>
+    <br>
+    <i class="large material-icons" id="icono_uno">group_work</i>
+    <h5>Facilidad de Uso</h5>
     <p>
       La facilidad de manejo de este software es muy amplia, nos hemos enfocado en hacer un producto con lógica,
       con lo suficiente y necesario para ser funcional. Además cuenta con una opción llamada “Ayuda”, en la cual se encontrara
@@ -9,8 +10,9 @@
       operación laboral conociendo toda esta amplia gama de opciones.
     </p>
   </div>
-  <div id="sec_dos">
-      <i class="large material-icons" id="icono_uno">insert_chart</i>
+  <div id="sec_dos" class="col s12 m8">
+      <br>
+      <i class="large material-icons" id="icono_uno">web</i>
       <h5>Control de Datos</h5>
       <p>
         Hemos dedicado la mayor parte de la creación de este software a conseguir la mejor forma de desplazamiento por el mismo, consiguiendo así
@@ -19,7 +21,8 @@
 
   </div>
   <div id="sec_tres">
-      <i class="large material-icons" id="icono_uno">insert_chart</i>
+      <br>
+      <i class="large material-icons" id="icono_uno">aspect_ratio</i>
       <h5>Experiencia</h5>
       <p>
         Dado que este software es para registros de datos, no es muy necesario un diseño profesional, pero nosotros damos a los ojos
