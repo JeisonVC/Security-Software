@@ -30,7 +30,9 @@ $usuario =Gestion_usuario::consultar_usuario();
 			<td>Apellido</td>
 			<td>Telefono</td>
 			<td>Correo Electronico</td>
+			<td>Nombre de usuario</td>
 			<td>Accion</td>
+			
 			
 			</tr>
 	</thead>
@@ -43,6 +45,9 @@ $usuario =Gestion_usuario::consultar_usuario();
 							<td>".$consulta["usu_ape"]."</td>
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_email"]."</td>
+							<td>".$consulta["usu_nick"]."</td>
+
+
 							<td>
 								<a href='modifico_usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>modificar</a>
 							</td>
