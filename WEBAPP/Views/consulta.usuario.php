@@ -38,7 +38,7 @@ $usuario =Gestion_usuario::consultar_usuario();
 		<?php
 			foreach ($usuario as $consulta) {
 				echo "<tr>
-							<td>".$consulta["usu_docu"]."</td>
+							<td>".$consulta["usu_doc"]."</td>
 							<td>".$consulta["usu_nom"]."</td>
 							<td>".$consulta["usu_ape"]."</td>
 							<td>".$consulta["usu_tel"]."</td>
