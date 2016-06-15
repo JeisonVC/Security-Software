@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1>Guardar Producto</h1>
-	<form action="../../Controller/producto.controller.php" method="POST">
-		<label>Codigo del producto</label>
-		<input type="text" name="txt_codpro"/></br>
-		<label>Codigo del tipo de producto</label>
-		<input type="text" name="txt_tipopro"/></br>
-		<label>Codigo de marca</label>
-		<input type="text" name="txt_marcapro"/></br>
-		<label>Descripcion del producto</label>
-		<input type="text" name="txt_descpro"/></br>
-		<button name="accion" value="create">Guardar</button>
-		<?php echo @$_REQUEST["$mensaje"];
-		?>
-	</form>
+<section id="losregistros">
+	<div class="registros">
+		<form action="../../Controller/producto.controller.php" method="POST">
+			<h5>Registro de productos</h5><hr>
 
-	<a href="guardar_tipoproducto.php">Guardar un tipo de producto</a>
-	<a href="guardar_marca.php">Guardar una marca</a>
+			<label>Codigo del producto<br></label>
+			<input type="text" name="txt_codpro"/></br>
+			<label>Codigo del tipo de producto<br></label>
+			<input type="text" name="txt_tipopro"/></br>
+			<label>Codigo de marca<br></label>
+			<input type="text" name="txt_marcapro"/></br>
+			<label>Descripcion del producto<br></label>
+			<input type="text" name="txt_descpro"/></br><br>
+			<button class="waves-effect waves-light btn "  name="accion" value="create">Guardar</button><br>
+			<?php echo @$_REQUEST["$mensaje"]; ?><br>
 
-</body>
-</html>
+			<button class="waves-effect waves-light btn red" ><a href="guardar_tipoproducto.php"></a>Guardar Tipo Producto</button> 
+		    <button class="waves-effect waves-light btn orange" ><a href="guardar_marca.php"></a>Guardar Marca</button>
+		</form>
+	</div>
+</section>	
+
+	

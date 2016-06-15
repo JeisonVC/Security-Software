@@ -3,48 +3,46 @@
 	require_once("../Model/usuario.class.php");
 	$rol =Gestion_usuario::cargar_rol();
 ?>
+<section id="losregistros">
+	<div class="registros">
+	<h5>Registro de Usuario</h5><hr>
+	<form action="../Controller/registrousu.php" method="post">
+		<label>Rol</label>
+		<select name="seleccion">
+			<?php
+			foreach ($rol as $roles) {
+			echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
+		}
+		?>
+		</select>
 
-<form action="../Controller/registrousu.php" method="post">
-	<label>Rol que Desempeña</label>
-	<select name="seleccion">
-		<?php
-		foreach ($rol as $roles) {
-		echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
-	}
-	?>
-	</select>
+		<br>
+		
+		<input title="Ingrese numero" pattern=".{10}" type="number" name="documento" placeholder="Escriba Documento!" required/><br>
 
-<br>
+	
+		<input type="text" name="nombre" placeholder="Escriba Nombre!" required/>
 
-	<label>Documento</label>
-	<input title="Ingrese numero" pattern=".{10}" type="number" name="documento" required/>
-<br>
+	
+		
+		<input type="text" name="apellido" id="apellido" placeholder="Escriba Apellido!" required/>
 
-	<label>Nombre</label>
-	<input type="text" name="nombre" required/>
-<br>
+	
+		
+		<input type="email" name="email" placeholder="Escriba Email!" required/>
 
-	<label>Apellido</label>
-	<input type="text" name="apellido" required/>
-<br>
-	<label>Email</label>
-	<input type="email" name="email" required/>
-<br>
+		
+		<input type="number" name="telefono" placeholder="Opcional" placeholder="Escriba Telefono!" />
 
-	<label>Telefono</label>
-	<input type="number" name="telefono" placeholder="Opcional" />
-<br>
+		
+		<input type="text" name="nombredeusuario" placeholder="Escriba Nombre Usuario!"required/>
 
-	<label>Nombre de usuario</label>
-	<input type="text" name="nombredeusuario" required/>
-<br>
+		
+		<input type="password" name="contrasena" required placeholder="Contraseña!"/><br><hr>
 
-	<label>Contraseña</label>
-	<input type="password" name="contrasena" required/>
-<br>
+		<button class="waves-effect waves-light btn blue" value="Guardar" name="action">GUARDAR</button>
+		<button class="waves-effect waves-light btn green" href="consulta.usuario.php">Consultar</button>
 
-	<button value="Guardar" name="action">Guardar</button>
-<br>
-	<button><a href="consulta.usuario.php">Consultar</a></button>
-
-</form>
+	</form>
+	</div>
+</section>	
