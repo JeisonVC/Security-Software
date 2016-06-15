@@ -42,7 +42,7 @@ $modulo=Gestion_permiso::Cargar_modulo();
 							<td>".$consulta["modulo_permi"]."</td>
 
 							<td>
-								<a href='modifico_permiso.php?codigo_permi=".$consulta["rol_cod"].".&codigo_modu=".$consulta["modu_cod"]."'>Modificar</a>
+								<a href='modifico_permiso.php?codigo_permi=".$consulta["rol_cod"]."&codigo_modu=".$consulta["modu_cod"]."'>Modificar</a>
 							
 							</td>
 
