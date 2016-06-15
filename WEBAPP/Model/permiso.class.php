@@ -13,8 +13,7 @@ class Gestion_permiso{
 		Conexion::Cerrarbd();
 		return $result;
 	}
-	function Guardar(){
-		function Guardar($rol_cod, $modu_cod, $estado_permi, $modulo_permi){
+	function Guardar($rol_cod, $modu_cod, $estado_permi, $modulo_permi){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
@@ -26,6 +25,19 @@ class Gestion_permiso{
 		Conexion::Cerrarbd();
 
 	}
+
+	function Consultar_permiso(){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM permiso";
+
+		$query=$pdo->prepare($sql);
+		$query->execute();
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+
+		Conexion::Cerrarbd();
+		return $result;
 
 	}
 

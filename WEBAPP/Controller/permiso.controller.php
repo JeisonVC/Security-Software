@@ -17,10 +17,12 @@ switch ($accion) {
 		}
 		break;
 	case 'Modificar':
-		$modu_cods=$_POST["txt_moducod"];
-		$modu_noms=$_POST["txt_modunom"];
+		$rol_cod=$_POST["rol_cod"];
+		$modu_cod=$_POST["modu_cod"];
+		$estado_permi=$_POST["estado_permi"];
+		$modulo_permi=$_POST["modulo_permi"];
 		try {
-			Gestion_modulo::Modificar($modu_cod, $modu_nom);
+			Gestion_modulo::Modificar($rol_cod, $modu_cod, $estado_permi, $modulo_permi);
 			echo "Modifico con exito";
 			} catch (Exception $e){
 				echo $e;
