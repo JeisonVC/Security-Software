@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
-
-
+  <script type="text/javascript">
+     $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
   </head>
   <body>
 

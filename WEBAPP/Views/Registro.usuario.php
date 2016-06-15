@@ -3,13 +3,18 @@
 	require_once("../Model/usuario.class.php");
 	$rol =Gestion_usuario::cargar_rol();
 ?>
+  <script type="text/javascript">
+     $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
 <section id="losregistros">
 	<div class="registros">
 	<h5>Registro de Usuario</h5><hr>
 	<form action="../Controller/registrousu.php" method="post">
 		<label>Rol</label>
 		<select name="seleccion">
-			<?php
+		<?php
 			foreach ($rol as $roles) {
 			echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
 		}
@@ -45,4 +50,5 @@
 
 	</form>
 	</div>
+
 </section>
