@@ -1,14 +1,16 @@
 <?php
 require_once("../Model/conexion.php");
-require_once("../Model/modulo.class.php");
+require_once("../Model/permiso.class.php");
 $accion=$_REQUEST["accion"];
 
 switch ($accion) {
 	case 'Guardar':
-		$modu_cod=$_POST["txt_moducod"];
-		$modu_nom=$_POST["txt_modunom"];
-		try {
-			Gestion_modulo::Guardar($modu_cod, $modu_nom);
+		$rol_cod=$_POST["sele_rol"];
+		$modu_cod=$_POST["sele_modu"];
+		$estado_permi=$_POST["estado_permi"];
+		$modulo_permi=$_POST["modu_permi"];
+		try{
+			Gestion_permiso::Guardar($rol_cod, $modu_cod, $estado_permi, $modulo_permi);
 			echo "Guardo con exito";
 		} catch (Exception $e){
 			echo $e;
@@ -25,5 +27,5 @@ switch ($accion) {
 			}
 				
 }
-header("location:../views/consulta.modulo.php");
+//header("location:../views/consulta.modulo.php");
 ?>

@@ -26,14 +26,14 @@ Class Gestion_modulo
 		Conexion::Cerrarbd();
 		return $result;
 	}
-	function Modificar($modu_cod, $modu_nom)
+	function Modificar($modu_cods, $modu_noms)
 	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		$sql = "UPDATE modulo SET modu_nom = ? WHERE modu_cod = ?";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($modu_nom, $modu_cod,));
+		$query->execute(array($modu_noms, $modu_cods));
 		Conexion::Cerrarbd();
 	}
 	function Consultarporcodigo($codigo)
