@@ -17,27 +17,27 @@
 		</select>
 
 		<br>
-		
+
 		<input title="Ingrese numero" pattern=".{10}" type="number" name="documento" placeholder="Escriba Documento!" required/><br>
 
-	
+
 		<input type="text" name="nombre" placeholder="Escriba Nombre!" required/>
 
-	
-		
+
+
 		<input type="text" name="apellido" id="apellido" placeholder="Escriba Apellido!" required/>
 
-	
-		
+
+
 		<input type="email" name="email" placeholder="Escriba Email!" required/>
 
-		
+
 		<input type="number" name="telefono" placeholder="Opcional" placeholder="Escriba Telefono!" />
 
-		
+
 		<input type="text" name="nombredeusuario" placeholder="Escriba Nombre Usuario!"required/>
 
-		
+
 		<input type="password" name="contrasena" required placeholder="Contraseña!"/><br><hr>
 
 		<button class="waves-effect waves-light btn blue" value="Guardar" name="action">GUARDAR</button>
@@ -45,4 +45,4 @@
 
 	</form>
 	</div>
-</section>	
+</section>

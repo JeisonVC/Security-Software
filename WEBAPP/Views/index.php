@@ -8,12 +8,15 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/estilos.css" charset="utf-8">
 
+
   </head>
   <body>
 
     <?php
       include ("nav.index.php");
       include ("form.login.php");
+
+
      ?>
 
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

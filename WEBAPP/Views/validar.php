@@ -15,6 +15,8 @@
     header("location: inicio.php");
   }
   elseif ($mostrar==0) {
-    echo "Contrasena o Usuario incorrecto!.";
+    header("location: index.php");
+
   }
+  
 ?>
