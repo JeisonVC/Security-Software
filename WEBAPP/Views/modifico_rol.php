@@ -17,6 +17,8 @@
       <br>
       <label>Nombre</label>
       <input type="text" name="txt_nomrol" value=" <?php echo $codigo["rol_nombre"]; ?>" required/>
+      <label>Descripcion</label>
+      <input type="text" name="txt_descrol" value=" <?php echo $codigo["rol_desc"]; ?>" required/>
   <button name="action" value="Update">Modificar</button>
   </form>
 </body>

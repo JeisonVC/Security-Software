@@ -33,7 +33,7 @@ Class Gestion_modulo
 
 		$sql = "UPDATE modulo SET modu_nom = ? WHERE modu_cod = ?";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($modu_noms, $modu_cods));
+		$query->execute(array($modu_nom, $modu_cod));
 		Conexion::Cerrarbd();
 	}
 	function Consultarporcodigo($codigo)

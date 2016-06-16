@@ -7,8 +7,9 @@ switch ($action) {
 	case 'Guardar':
 		$codigo_rol=$_POST["txt_codrol"];
 		$nombre_rol=$_POST["txt_nomrol"];
+		$desc_rol=$_POST["txt_descrol"];
 		try{
-			Gestion_rol::Guardar($codigo_rol, $nombre_rol);
+			Gestion_rol::Guardar($codigo_rol, $nombre_rol, $desc_rol);
 			echo "Guardo con exito";
 			echo "<a href='../Views/Regitro.rol.php'>Volver</a>";
 
@@ -20,8 +21,9 @@ switch ($action) {
 	case 'Update':
 		$rol_cod = $_POST["txt_codrol"];
 		$rol_nombre = $_POST["txt_nomrol"];
+		$desc_rol=$_POST["txt_descrol"];
 		try{
-			Gestion_rol::Modificar($rol_cod, $rol_nombre);
+			Gestion_rol::Modificar($rol_cod, $rol_nombre, $desc_rol);
 			echo "Modifico con exito";
 			echo "<a href='../Views/consulta.rol.php'>Volver</a>";
 		}catch(Exception $e){
@@ -42,5 +44,5 @@ switch ($action) {
        		 }
      	break;		
 }
-//header("location:../views/consulta.rol.php");
+header("location:../views/consulta.rol.php");
 ?>

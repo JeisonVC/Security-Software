@@ -27,6 +27,7 @@ $rol =Gestion_rol::Consultar();
 		<tr>
 			<td>Codigo</td>
 			<td>Nombre del rol</td>
+			<td>Descripcion</td>
 			<td>Accion</td>
 			
 			</tr>
@@ -38,6 +39,7 @@ $rol =Gestion_rol::Consultar();
 				echo "<tr>
 							<td>".$consulta["rol_cod"]."</td>
 							<td>".$consulta["rol_nombre"]."</td>
+							<td>".$consulta["rol_desc"]."</td>
 							<td>
 								<a href='modifico_rol.php?codigo_rol=".$consulta["rol_cod"]."'>modificar</a>
 								<a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' >Eliminar</a>
