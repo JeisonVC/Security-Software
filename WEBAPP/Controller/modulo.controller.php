@@ -15,16 +15,16 @@ switch ($accion) {
 		}
 		break;
 	case 'Modificar':
-		$modu_cod=$_POST["txt_moducod"];
-		$modu_nom=$_POST["txt_modunom"];
-		try {
+		 $modu_cod=$_POST["txt_moducod"];
+		 $modu_nom=$_POST["txt_modunom"];
+		try { 
 			Gestion_modulo::Modificar($modu_cod, $modu_nom);
 			echo "Modifico con exito";
-			header("location:../views/consulta.modulo.php");
+			//header("location:../views/consulta.modulo.php");
 			} catch (Exception $e){
 				echo $e;
 			}
 				
 }
-//header("location:../views/consulta.modulo.php");
+header("location:../views/consulta.modulo.php");
 ?>
