@@ -14,9 +14,10 @@ switch ($action) {
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
 		$contrasena=$_POST["contrasena"];
+		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
+			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
@@ -34,7 +35,7 @@ switch ($action) {
 		$telefono=$_POST["telefono"];
 		$nombredeusuario=$_POST["nombredeusuario"];
 		$contrasena=$_POST["contrasena"];
-		
+
 try{
 			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$contrasena);
 			header("location:../views/consulta.usuario.php");

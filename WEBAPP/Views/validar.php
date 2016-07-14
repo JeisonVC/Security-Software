@@ -1,22 +1,28 @@
 <?php
-  #Conexion de php con mysql a modo de procedimientos
+require_once("../Model/conexion.php");
+require_once("validar.class.php");
 
-  $name =$_POST["nombre"];
-  $pass =$_POST["contrasena"];
 
-  include ("conexion.php");
 
-  $consulta = ("select usu_nick, usu_pass from usuario where usu_nick='".mysql_real_escape_string($name)."' and usu_pass='".mysql_real_escape_string($pass)."'");
-  $resultado = mysqli_query($conexion, $consulta);
 
-  $mostrar = mysqli_num_rows($resultado);
+    if (isset($_POST["sesion_vigilante"])) {
+      $name=htmlentities(addslashes($_POST["nombre"]));
+      $pass=htmlentities(addslashes($_POST["contrasena"]));
 
-  if ($mostrar>0) {
-    header("location: inicio.php");
-  }
-  elseif ($mostrar==0) {
-    header("location: index.php");
+        try {
+              login::valida($name,$pass);
 
-  }
-  
+
+          }
+
+        catch (Exception $e) {
+            echo $e->getMessage();
+              if ($e->getCode()== "42S02") {
+                echo "Error al nombrar tabla de la consulta";
+              }
+          }
+        }
+
+
+
 ?>

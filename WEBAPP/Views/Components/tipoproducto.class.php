@@ -13,7 +13,7 @@ class Gestion_Tipoproducto{
 		Conexion::Cerrarbd();
 	}
 	function ConsultarTodo()
-	{	
+	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -47,7 +47,7 @@ class Gestion_Tipoproducto{
 
 
 		Conexion::Cerrarbd();
-	}	
+	}
 	function ConsultarPorCodigo($codigo){
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

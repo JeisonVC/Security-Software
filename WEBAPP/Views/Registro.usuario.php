@@ -3,46 +3,60 @@
 	require_once("../Model/usuario.class.php");
 	$rol =Gestion_usuario::cargar_rol();
 ?>
-<section id="losregistros">
+<section>
 	<div class="registros">
-	<h5>Registro de Usuario</h5><hr>
+	<h5>Registro de Usuario</h5>
 	<form action="../Controller/registrousu.php" method="post">
-		<label>Rol</label>
-		<select name="seleccion">
-			<?php
-			foreach ($rol as $roles) {
-			echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
-		}
-		?>
-		</select>
+		<div class="row col s6">
+			<select name="seleccion" class="browser-default purple white-text" >
+				<option  disabled selected>Elija un Rol</option>
+				 <?php
+					 foreach ($rol as $roles) {
+							echo "<option value=".$roles["rol_cod"].">".$roles["rol_nombre"]."</option>";
+					}
+				?>
+		  </select>
+   </div>
+		<div class="row">
+			 <div class="input-field col s6">
+				 <i class="material-icons prefix">account_circle</i>
+				 <input name="nombre"  type="text" class="validate" required>
+				 <label>Nombre</label>
+			 </div>
+			 <div class="input-field col s6">
+					<i class="material-icons prefix">assignment_ind</i>
+					<input name="apellido" id="icon_apellido" type="text" class="validate" required>
+					<label for="icon_apellido">Apellido</label>
+				</div>
+				<div class="input-field col s6">
+ 				 <i class="material-icons prefix">label_outline</i>
+ 				 <input name="documento" id="icon_documento" type="number" class="validate" required>
+ 				 <label for="icon_documento">Docuentos de Identidad</label>
+ 			 </div>
+			 <div class="input-field col s6">
+				 <i class="material-icons prefix">perm_identity</i>
+				 <input name="nombredeusuario" id="icon_telephone" type="text" class="validate" required>
+				 <label for="icon_telephone">Usuario</label>
+			 </div>
+			 <div class="input-field col s6">
+				<i class="material-icons prefix">email</i>
+				<input name="email" id="icon_email" type="email" class="validate" required>
+				<label for="icon_email">Email</label>
+			</div>
+			 <div class="input-field col s6">
+				 <i class="material-icons prefix">phone</i>
+				 <input name="telefono" id="icon_telephone" type="number" class="validate" required>
+				 <label for="icon_telephone">Telefono</label>
+			 </div>
+			 <div class="input-field col s6">
+				 <i class="material-icons prefix">vpn_key</i>
+				 <input name="contrasena" id="icon_telephone" type="password" class="validate" required>
+				 <label for="icon_telephone">Contraseña</label>
+			 </div>
+		 </div>
+		 <button class="waves-effect waves-light btn blue" value="Guardar" name="action">Guardar</button>
+ 		<button class="waves-effect waves-light btn green" href="consulta.usuario.php">Consultar</button>
+	 </form>
 
-		<br>
 
-		<input title="Ingrese numero" pattern=".{10}" type="number" name="documento" placeholder="Escriba Documento!" required/><br>
-
-
-		<input type="text" name="nombre" placeholder="Escriba Nombre!" required/>
-
-
-
-		<input type="text" name="apellido" id="apellido" placeholder="Escriba Apellido!" required/>
-
-
-
-		<input type="email" name="email" placeholder="Escriba Email!" required/>
-
-
-		<input type="number" name="telefono" placeholder="Opcional" placeholder="Escriba Telefono!" />
-
-
-		<input type="text" name="nombredeusuario" placeholder="Escriba Nombre Usuario!"required/>
-
-
-		<input type="password" name="contrasena" required placeholder="Contraseña!"/><br><hr>
-
-		<button class="waves-effect waves-light btn blue" value="Guardar" name="action">GUARDAR</button>
-		<button class="waves-effect waves-light btn green" href="consulta.usuario.php">Consultar</button>
-
-	</form>
-	</div>
 </section>

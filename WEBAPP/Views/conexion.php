@@ -1,15 +1,28 @@
 <?php
-  $db_host="localhost";
-  $db_usuario="root";
-  $db_contra="";
-  $db_nombre="securitysoftware";
+	class Conexion{
+		private static $bdhost="localhost";
+		private static $bdname="securitysoftware";
+		private static $bduser="root";
+		private static $bdpass="";
 
-  $conexion = mysqli_connect($db_host, $db_usuario, $db_contra, $db_nombre);
+		private static $conex=null;
 
-  if (mysqli_connect_errno()) {
-    echo "No se a podido conectar";
-    exit();
-  }
-
-  mysqli_set_charset($conexion, "utf8");
+		public static function Abrirbd(){
+			if(self::$conex==null){
+				try {
+					self::$conex=new PDO('mysql:host='.self::$bdhost.';dbname='.self::$bdname.';charset=utf8',self::$bduser, self::$bdpass);
+					self::$conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					//echo "BD abierta";
+				}
+				catch(ThrowDDDDable $ex){
+					echo $ex->getMessage();
+				}
+			}return self::$conex;
+		}
+		public static function Cerrarbd()
+		{
+			self::$conex=null;
+			//echo "BD cerrada";
+		}
+	}
 ?>

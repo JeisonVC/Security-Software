@@ -10,7 +10,7 @@
 		public static function Abrirbd(){
 			if(self::$conex==null){
 				try {
-					self::$conex=new PDO('mysql:host='.self::$bdhost.';dbname='.self::$bdname.'',self::$bduser, self::$bdpass);
+					self::$conex=new PDO('mysql:host='.self::$bdhost.';dbname='.self::$bdname.';charset=utf8',self::$bduser, self::$bdpass);
 					self::$conex->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					//echo "BD abierta";
 				}
