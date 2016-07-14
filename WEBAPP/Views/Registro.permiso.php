@@ -32,3 +32,4 @@ $modulo=Gestion_permiso::Cargar_modulo();
 
 	<button value="Guardar" name="accion">Guardar</button>
 </form>
+<a href="consulta.permiso.php">Consultar todo</a>

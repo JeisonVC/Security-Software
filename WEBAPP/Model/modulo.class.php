@@ -26,14 +26,16 @@ Class Gestion_modulo
 		Conexion::Cerrarbd();
 		return $result;
 	}
-	function Modificar($modu_cods, $modu_noms)
+	//Cuando no de el modificar un solo campo a modificar, se puede hacer lo de la sentencia sql
+	function Modificar($modu_cod, $modu_nom)
 	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "UPDATE modulo SET modu_nom = ? WHERE modu_cod = ?";
+		$sql = "UPDATE modulo SET modu_nom = '".$modu_nom."' WHERE modu_cod = $modu_cod";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($modu_noms, $modu_cods));
+		$query->execute();
+		//, $modu_cod
 		Conexion::Cerrarbd();
 	}
 	function Consultarporcodigo($codigo)

@@ -1,13 +1,13 @@
 <?php
 class Gestion_rol{
-	function Guardar($codigo_rol, $nombre_rol){
+	function Guardar($codigo_rol, $nombre_rol, $desc_rol){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO rol(rol_cod, rol_nombre) values(?,?)";
+		$sql="INSERT INTO rol(rol_cod, rol_nombre, rol_desc) values(?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($codigo_rol, $nombre_rol));
+		$query->execute(array($codigo_rol, $nombre_rol, $desc_rol));
 
 		Conexion::Cerrarbd();
 
@@ -37,14 +37,14 @@ class Gestion_rol{
 		Conexion::Cerrarbd();
 		return $result;
 	}
-	function Modificar($rol_cod, $rol_nombre)
+	function Modificar($rol_cod, $rol_nombre, $desc_rol)
 	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "UPDATE rol SET rol_nombre = ? WHERE rol_cod = ?";
+		$sql = "UPDATE rol SET rol_nombre = ?, rol_desc = ? WHERE rol_cod = ?";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($rol_cod, $rol_nombre));
+		$query->execute(array($rol_nombre, $desc_rol, $rol_cod));
 		Conexion::Cerrarbd();
 	}
 	function Eliminar($codigo_rol)
