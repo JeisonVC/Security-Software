@@ -6,8 +6,12 @@ require_once("validar.class.php");
 
 
     if (isset($_POST["sesion_vigilante"])) {
-      $name=htmlentities(addslashes($_POST["nombre"]));
-      $pass=htmlentities(addslashes($_POST["contrasena"]));
+    #  $name=htmlentities(addslashes($_POST["nombre"]));
+    #  $pass=htmlentities(addslashes($_POST["contrasena"]));
+        $name=$_POST["nombre"];
+        $pass=$_POST["contrasena"];
+        $pass = str_replace("select","123456789",$pass);#buscar bien sobre str
+
 
         try {
               login::valida($name,$pass);

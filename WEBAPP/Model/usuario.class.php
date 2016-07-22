@@ -25,7 +25,7 @@ class Gestion_usuario{
 		Conexion::Cerrarbd();
 
 	}
-	
+
 	function consultar_usuario(){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
