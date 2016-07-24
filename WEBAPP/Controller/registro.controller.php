@@ -4,7 +4,7 @@ require_once("../Model/usuario.class.php");
 
 $action=$_REQUEST["action"];
 switch ($action) {
-	case 'Guardar':
+	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
 		$seleccion=$_POST["seleccion"];
 		//$codigo=$_POST["codigo"];
 		$documento=$_POST["documento"];
@@ -26,7 +26,7 @@ switch ($action) {
 
 		break;
 
-		case 'Modificar':
+		case 'Modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
 		$codigo=$_POST["codigo"];
 		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
