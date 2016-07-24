@@ -49,7 +49,7 @@ $usuario =Gestion_usuario::consultar_usuario();
 
 
 							<td>
-								<a href='modifico_usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>modificar</a>
+								<a href='modificar.usuario.php?codigo_usuario=".$consulta["usu_cod"]."'>modificar</a>
 							</td>
 					</tr>";
 			}

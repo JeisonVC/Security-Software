@@ -6,7 +6,7 @@
 <section>
 	<div class="registros">
 	<h5>Registro de Usuario</h5>
-	<form action="../Controller/registrousu.php" method="post">
+	<form action="../Controller/registro.controller.php" method="post">
 		<div class="row col s6">
 			<select name="seleccion" class="browser-default purple white-text" >
 				<option  disabled selected>Elija un Rol</option>
