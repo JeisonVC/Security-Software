@@ -6,8 +6,9 @@ require_once("validar.class.php");
 
 
     if (isset($_POST["sesion_vigilante"])) {
-        $name=addcslashes($_POST["nombre"]);
-        $pass=addcslashes($_POST["contrasena"]);
+        $name=$_POST["nombre"];
+
+        $pass=$_POST["contrasena"];
 
 
 
