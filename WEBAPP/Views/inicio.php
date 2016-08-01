@@ -1,6 +1,6 @@
 <?php
 		include 'validar.inicio.php';
-		inicio::session();
+		// inicio::session();
 ?>
 <!DOCTYPE html>
  <html>
