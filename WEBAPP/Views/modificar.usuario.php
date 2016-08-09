@@ -7,12 +7,7 @@ $codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
 
 ?>
 
-<html>
-<head>
-<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
+
 	<h1>Modificar usuario</h1>
 	<form action="../Controller/registrousu.php" method="POST">
 		<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
@@ -53,6 +48,3 @@ $codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
 
 </form>
 
-</div>
-</body>
-</html>
